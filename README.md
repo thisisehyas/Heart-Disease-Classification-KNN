@@ -6,9 +6,9 @@ The aim is to develop a clean and reproducible machine learning pipeline that in
 
 ## **Overview of the Project**
 
-Heart disease detection is a high-priority task in medical data science. In the following project, a binary classification model was developed that predicts whether a person has heart disease according to 13 medical attributes comprising age, chest pain type, cholesterol level, blood pressure, and many more.
+Heart disease detection is a high-priority task in medical data science. This project develops a binary classification model that predicts whether a person has heart disease according to 13 medical attributes comprising age, chest pain type, cholesterol level, blood pressure, and many more.
 
-The workflow involves the following:
+The workflow includes the following:
 
 - Loading and preparing the UCI dataset
 - Handling missing values
@@ -57,12 +57,62 @@ I have used **Spearman correlation** to assess the relationship of each feature 
 
 Top correlated features (positive and negative):
 
-- **thal, ca, cp, exang, oldpeak, slope** (strong positive correlation)
-- **thalach** (strong negative correlation)
+- **thal, ca, cp, exang, oldpeak, slope, thelach**: the most correlated features (positive or negative)
 - All the low-impact features like **fbs** and **chol** were removed.
 
 The final selected features were:
 
 ```
 ['thal', 'ca', 'cp', 'exang', 'oldpeak', 'slope', 'sex', 'age', 'thalach']
+```
+
+## **PCA Analysis**
+
+To visualize the structure in this dataset, **Principal Component Analysis (PCA)** was applied with 2 components.
+
+- The first two components explained **~36%** of the total variance.
+- The scatter plot displays partial separation between the two classes. Hence, KNN could be an acceptable choice.
+
+## **Model Training (KNN)**
+
+Data was split into:
+
+- **80% training**
+- **20% test**
+- **Stratified splitting** to preserving class balance
+
+Hyperparameters tested:
+
+- `k` from **1 to 20**
+- Distance metrics: **euclidean**, **manhattan**
+
+The best model:
+
+- **K = 18**
+- **Metric = euclidean**
+- **Accuracy = 0.8852**
+
+A comparison plot of accuracy vs. K for both metrics was generated.
+
+## **Model Evaluation**
+
+The best KNN model was evaluated on the test set.
+
+**Classification Report**
+
+- **Accuracy:** ~89%
+- **Precision:** > 0.85 for both classes
+- **Recall:** > 0.88 for both classes
+- **F1-score:** > 0.88 for both classes
+
+**Confusion Matrix**  
+The matrix shows a balanced performance in predicting both “no disease” and “disease” cases.
+
+## **Project Structure**
+
+```
+Heart-Disease-Classification-KNN/
+│
+├── README.md
+└── heart_disease_knn.ipynb   # main notebook
 ```
