@@ -136,6 +136,7 @@ Heart-Disease-Classification-KNN/
    ```
 
 3. **Run the notebook**
+
    Open the Jupyter notebook:
 
    ```
