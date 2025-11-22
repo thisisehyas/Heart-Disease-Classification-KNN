@@ -114,5 +114,51 @@ The matrix shows a balanced performance in predicting both “no disease” and 
 Heart-Disease-Classification-KNN/
 │
 ├── README.md
-└── heart_disease_knn.ipynb   # main notebook
+├── heart_disease_knn.ipynb   # main notebook
+└── requirements.txt
 ```
+
+## **How to Run**
+
+### **Local Execution**
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/Heart-Disease-Classification-KNN.git
+   cd Heart-Disease-Classification-KNN
+   ```
+
+2. **Install the required libraries**
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. **Run the notebook**
+   Open the Jupyter notebook:
+
+   ```
+   jupyter notebook heart_disease_knn.ipynb
+   ```
+
+   Running all cells will reproduce the entire workflow.
+
+### **Google Colab (Recommended)**
+
+If you're using Google Colab, you can simply upload the notebook:
+
+1. Open **Google Colab** -> File -> Upload Notebook
+2. Upload `heart_disease_knn.ipynb`
+3. Install dependencies inside Colab:
+
+   ```
+   !pip install ucimlrepo scikit-learn pandas numpy matplotlib seaborn
+   ```
+
+   Note: Colab already includes most libraries by default.
+   You may only need to install `ucimlrepo`.
+
+4. Run all cells
+
+   The dataset loads automatically from the UCI repository, so no extra files are required.
