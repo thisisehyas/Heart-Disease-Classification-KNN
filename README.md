@@ -76,6 +76,8 @@ The final selected features were:
 
 To visualize the structure in this dataset, **Principal Component Analysis (PCA)** was applied with 2 components.
 
+![PCA Scatter Plot](plots/pca_scatter.png)
+
 - The first two components explained **~36%** of the total variance.
 - The scatter plot displays partial separation between the two classes. Hence, KNN could be an acceptable choice.
 
@@ -100,6 +102,8 @@ The best model:
 
 A comparison plot of accuracy vs. K for both metrics was generated.
 
+![Accuracy vs K](plots/accuracy_vs_k.png)
+
 ## **Model Evaluation**
 
 The best KNN model was evaluated on the test set.
@@ -114,14 +118,20 @@ The best KNN model was evaluated on the test set.
 **Confusion Matrix**  
 The matrix shows a balanced performance in predicting both “no disease” and “disease” cases.
 
+![Confusion Matrix](plots/confusion_matrix.png)
+
 ## **Project Structure**
 
 ```
 Heart-Disease-Classification-KNN/
 │
 ├── README.md
-├── heart_disease_knn.ipynb   # main notebook
-└── requirements.txt
+├── heart_disease_knn.ipynb       # main analysis notebook
+├── requirements.txt
+└── plots/                        # exported visualizations
+    ├── pca_scatter.png
+    ├── accuracy_vs_k.png
+    └── confusion_matrix.png
 ```
 
 ## **How to Run**
