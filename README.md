@@ -2,7 +2,7 @@
 
 The project uses the **K-Nearest Neighbors (KNN)** algorithm on medical data from the **UCI Heart Disease dataset** for the prediction of heart disease.
 
-The aim is to develop a clean and reproducible machine learning pipeline that involves preprocessing, feature selection, dimensionality analysis (PCA), training, and evaluation.
+The aim is to develop a clean and reproducible machine learning pipeline that involves preprocessing, feature selection, dimensionality reduction (PCA), training, and evaluation.
 
 ## **Overview of the Project**
 
@@ -59,7 +59,7 @@ KNN uses distance calculations, so features need to be on the same scale.
 
 ## **Feature Analysis & Selection**
 
-I have used **Spearman correlation** to assess the relationship of each feature with the binary target.
+I used **Spearman correlation** to assess the relationship of each feature with the binary target.
 
 Top correlated features (positive and negative):
 
@@ -79,7 +79,7 @@ To visualize the structure in this dataset, **Principal Component Analysis (PCA)
 ![PCA Scatter Plot](plots/pca_scatter.png)
 
 - The first two components explained **~36%** of the total variance.
-- The scatter plot displays partial separation between the two classes. Hence, KNN could be an acceptable choice.
+- The scatter plot displays partial separation between the two classes suggesting that KNN could be an acceptable choice.
 
 ## **Model Training (KNN)**
 
@@ -100,7 +100,7 @@ The best model:
 - **Metric = euclidean**
 - **Accuracy = 0.8852**
 
-A comparison plot of accuracy vs. K for both metrics was generated.
+A comparison plot of accuracy vs. K was generated for both distance metrics.
 
 ![Accuracy vs K](plots/accuracy_vs_k.png)
 
