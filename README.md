@@ -6,7 +6,7 @@ The aim is to develop a clean and reproducible machine learning pipeline that in
 
 ## **Overview of the Project**
 
-Heart disease detection is a high-priority task in medical data science. This project develops a binary classification model that predicts whether a person has heart disease according to 13 medical attributes comprising age, chest pain type, cholesterol level, blood pressure, and many more.
+Heart disease detection is a high-priority task in medical data science. This project develops a binary classification model that predicts whether a person has heart disease based on 13 medical attributes, including age, chest pain type, cholesterol level, blood pressure, and more.
 
 The workflow includes the following:
 
@@ -19,6 +19,12 @@ The workflow includes the following:
 - Evaluating model performance using standard metrics
 
 The final KNN model achieved **88–89% accuracy** while balanced in performance for both classes.
+
+## Motivation
+
+This project was created to practice building a complete machine learning pipeline using a real medical dataset. I chose the UCI Heart Disease dataset because it is a well-known benchmark in data science and provides a good mix of features for preprocessing, feature selection, and model training.
+
+The main goal was to develop a clean and reproducible workflow that includes data preparation, exploratory analysis, PCA visualization, and tuning a KNN classifier.
 
 ## **Dataset**
 
@@ -57,7 +63,7 @@ I have used **Spearman correlation** to assess the relationship of each feature 
 
 Top correlated features (positive and negative):
 
-- **thal, ca, cp, exang, oldpeak, slope, thelach**: the most correlated features (positive or negative)
+- **thal, ca, cp, exang, oldpeak, slope, thalach**: the most correlated features (positive or negative)
 - All the low-impact features like **fbs** and **chol** were removed.
 
 The final selected features were:
@@ -79,7 +85,7 @@ Data was split into:
 
 - **80% training**
 - **20% test**
-- **Stratified splitting** to preserving class balance
+- **Stratified splitting** to preserve class balance
 
 Hyperparameters tested:
 
